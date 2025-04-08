@@ -1,68 +1,144 @@
-// Seleciona o canvas da section
+// Seleciona o canvas
 const canvas = document.getElementById("dodecaCanvas");
-const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x000000); // Fundo preto no Three.js
+
+// Cena e câmera
+const cena = new THREE.Scene();
+cena.background = new THREE.Color(0x000000); // Fundo preto
 
 const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+camera.position.set(0, 0, 12); // Posição inicial da câmera
 
-function resizeRenderer() {
-    const section = document.querySelector(".dodeca-section");
-    const { width, height } = section.getBoundingClientRect();
-    renderer.setSize(width, height);
+// Renderizador
+const renderizador = new THREE.WebGLRenderer({ canvas, alpha: true });
+
+// Variáveis de controle
+let tempo = 0;
+let posMouseX = 0;
+let posMouseY = 0;
+
+let dodecaedro;
+
+// ========== Funções ==========
+
+// Ajusta o tamanho do renderizador com base na seção
+function redimensionarRenderizador() {
+    const secao = document.querySelector(".dodeca-section");
+    const { width, height } = secao.getBoundingClientRect();
+
+    renderizador.setSize(width, height);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
 }
 
-resizeRenderer();
 
-// Criando o dodecaedro
-const geometry = new THREE.DodecahedronGeometry(2);
-const edgesGeometry = new THREE.EdgesGeometry(geometry);
-const edgesMaterial = new THREE.LineBasicMaterial({ color: 0x605d59, linewidth: 2 });
-const edges = new THREE.LineSegments(edgesGeometry, edgesMaterial);
+function criarDodecaedro() {
+    const geometria = new THREE.DodecahedronGeometry(2);
+    const geometriaBordas = new THREE.EdgesGeometry(geometria);
+    const materialBordas = new THREE.LineBasicMaterial({ color: 0x605d59 });
 
-// Posicionando o dodecaedro
-edges.position.set(0, 0, 7);// Move para cima e mais perto
+    dodecaedro = new THREE.LineSegments(geometriaBordas, materialBordas);
+    dodecaedro.position.set(0, 0, 7);
 
-scene.add(edges);
-
-camera.position.z = 12;
-camera.position.y = 0;
-camera.position.x = 0;
-    //camera.lookAt(edges.position);
-
-let time = 0; // Variável para controlar o tempo do movimento
-let mouseX = 0;
-let mouseY = 0;
-
-// Captura o movimento do mouse e normaliza os valores
-window.addEventListener("mousemove", (event) => {
-    const halfWidth = window.innerWidth / 2;
-    const halfHeight = window.innerHeight / 2;
-
-    mouseX = (event.clientX - halfWidth) / halfWidth; // Normaliza entre -1 e 1
-    mouseY = (event.clientY - halfHeight) / halfHeight; // Normaliza entre -1 e 1
-});
-
-function animate() {
-    requestAnimationFrame(animate);
-
-    // Rotação normal
-    edges.rotation.x += 0.002;
-    edges.rotation.y += 0.002;
-
-    // Movimento para cima e para baixo
-    time += 0.02; // Controla a velocidade do movimento vertical
-    edges.position.y = Math.sin(time) * 0.3; // Define o deslocamento vertical
-
-    // Movimento baseado no mouse (multiplicadores ajustáveis)
-    edges.position.x = mouseX * 0.3; // Move na horizontal
-    edges.position.y += mouseY * 0.3; // Move na vertical (sem substituir a flutuação)
-
-    renderer.render(scene, camera);
+    cena.add(dodecaedro);
 }
 
-animate();
 
-window.addEventListener('resize', resizeRenderer);
+function registrarMovimentoMouse() {
+    window.addEventListener("mousemove", (evento) => {
+        const larguraMetade = window.innerWidth / 2;
+        const alturaMetade = window.innerHeight / 2;
+
+        posMouseX = (evento.clientX - larguraMetade) / larguraMetade;
+        posMouseY = (evento.clientY - alturaMetade) / alturaMetade;
+    });
+}
+
+
+function animar() {
+    requestAnimationFrame(animar);
+
+    if (!dodecaedro) return;
+
+    dodecaedro.rotation.x += 0.002;
+    dodecaedro.rotation.y += 0.002;
+
+    tempo += 0.02;
+    dodecaedro.position.y = Math.sin(tempo) * 0.3;
+    dodecaedro.position.x = posMouseX * 0.3;
+    dodecaedro.position.y += posMouseY * 0.3;
+
+    renderizador.render(cena, camera);
+}
+
+
+function iniciarCena() {
+    redimensionarRenderizador();
+    criarDodecaedro();
+    registrarMovimentoMouse();
+    animar();
+}
+
+
+window.addEventListener("resize", redimensionarRenderizador);
+
+iniciarCena();
+
+
+
+// Canvas 2
+const canvas2 = document.getElementById("dodecaCanvas2");
+
+const cena2 = new THREE.Scene();
+cena2.background = new THREE.Color(0x000000);
+
+const camera2 = new THREE.PerspectiveCamera(75, canvas2.clientWidth / canvas2.clientHeight, 0.1, 1000);
+camera2.position.set(0, 0, 12);
+
+const renderizador2 = new THREE.WebGLRenderer({ canvas: canvas2, alpha: true });
+
+let dodecaedro2;
+let tempo2 = 0;
+
+function redimensionarRenderizador2() {
+    const secao = document.querySelector(".second-canvas");
+    const { width, height } = secao.getBoundingClientRect();
+
+    renderizador2.setSize(width, height);
+    camera2.aspect = width / height;
+    camera2.updateProjectionMatrix();
+}
+
+function criarDodecaedro2() {
+    const geometria = new THREE.DodecahedronGeometry(1.5);
+    const geometriaBordas = new THREE.EdgesGeometry(geometria);
+    const materialBordas = new THREE.LineBasicMaterial({ color: 0x605d59 });
+
+    dodecaedro2 = new THREE.LineSegments(geometriaBordas, materialBordas);
+    dodecaedro2.position.set(0, 0, 7);
+
+    cena2.add(dodecaedro2);
+}
+
+function animar2() {
+    requestAnimationFrame(animar2);
+
+    if (!dodecaedro2) return;
+
+    dodecaedro2.rotation.x += 0.003;
+    dodecaedro2.rotation.y += 0.003;
+
+    tempo2 += 0.02;
+    dodecaedro2.position.y = Math.sin(tempo2) * 0.2;
+
+    renderizador2.render(cena2, camera2);
+}
+
+function iniciarCena2() {
+    redimensionarRenderizador2();
+    criarDodecaedro2();
+    animar2();
+}
+
+window.addEventListener("resize", redimensionarRenderizador2);
+iniciarCena2();
+

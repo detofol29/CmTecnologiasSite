@@ -13,7 +13,7 @@
 <body class="bg-black text-gray-900">
 
     <!-- Navbar -->
-    <nav class="bg-black text-white p-4 fixed w-full top-0 shadow-md">
+    <nav class="bg-transparent text-white p-4 fixed w-full top-0 shadow-md">
         <div class="container mx-auto flex justify-between items-center mt-4">
             <img src="assets/cmLogo.jpg" alt="" class="w-40 h-auto ml-16">
             <button class="mr-16">
@@ -26,35 +26,34 @@
         <canvas id="dodecaCanvas"></canvas>
     </section>
 
-    <section class="bg-[#cba34d] text-white text-center py-20 mt-20">
+
+    <section class="second-canvas">
+        <canvas id="dodecaCanvas2"></canvas>
+    </section>
+
+    <section class="bg-transparent text-white text-center mt-20">
         <!-- bg-transparent -->
-        <div class="text-white bg-black text-center py-40 mt-20 w-[100%]">
-            <div>
+        <div class="text-white bg-transparent text-center py-40 mt-40 w-[100%]">
+            <div class="text-left w-[80%] mx-auto">
                 <h1 class="OutfitTituloFino">
                     <span class="OutfitTitulo">Transformamos</span> seus ambientes<br> em uma extensão <span
                         class="OutfitTitulo">de você!</span>
                 </h1>
             </div>
-            <div>
+            <div class ="text-left w-[80%] mx-auto mt-10">
                 <p class="OutfitTextoCinza">
-                    Proporcionar soluções tecnológicas integradas que traz
-                    segurança, conforto e praticidade através de automação,
+                    Proporcionar soluções tecnológicas integradas que traz<br>
+                    segurança, conforto e praticidade através de automação,<br>
                     inteligência e inovação em todos os detalhes.
                 </p>
             </div>
-            <div>
+            <div class="text-left w-[80%] mx-auto mt-10">
                 <button
                     class="bg-[#cba34d] text-center w-[280px] rounded-3xl h-14 relative text-black text-xl font-semibold group"
                     type="button">
 
                     <div
                         class="bg-black rounded-full h-12 w-1/4 flex items-center text-white justify-center absolute left-1 top-[4px] bottom-[4px] right-1 group-hover:w-[98%] z-10 duration-500">
-                        <!-- <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 1024 1024"
-                        height="25px"
-                        width="25px"
-                        > -->
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -76,12 +75,6 @@
 
                     <div
                         class="bg-black rounded-full h-12 w-1/4 flex items-center text-white justify-center absolute left-1 top-[4px] bottom-[4px] right-1 group-hover:w-[98%] z-10 duration-500 border border-white">
-                        <!-- <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 1024 1024"
-                        height="25px"
-                        width="25px"
-                        > -->
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -100,11 +93,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <!-- <footer class="bg-black text-white text-center p-4 mt-12">
-        <p>&copy; 2025 Minha Empresa. Todos os direitos reservados.</p>
-    </footer> -->
     <script src="js/script.js"></script>
 </body>
 
