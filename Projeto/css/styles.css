@@ -1,23 +1,66 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background-color: black;}
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-        /* Seção com fundo preto */
-        .dodeca-section {
-            position: fixed; top: 0; left: 50; /* Fixa a seção no topo da página */
-			right: 0; bottom: 0; /* Preenche toda a tela */
-            height: 800px;
-			width: 800px;
-            overflow: hidden;
-			pointer-events: none;
-			z-index: -1;
-             /* Define o fundo preto */
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .dodeca-section canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+/* Seção com fundo preto */
+.dodeca-section {
+    position: fixed;
+    top: 0;
+    left: 50;
+    /* Fixa a seção no topo da página */
+    right: 0;
+    bottom: 0;
+    /* Preenche toda a tela */
+    height: 800px;
+    width: 800px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+    /* Define o fundo preto */
+}
+
+.dodeca-section canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.OutfitTitulo {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 86px;
+    line-height: 103px;
+}
+
+.OutfitTituloFino {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 86px;
+    line-height: 103px;
+}
+
+.OutfitTextoCinza {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    
+}
