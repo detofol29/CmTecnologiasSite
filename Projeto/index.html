@@ -12,35 +12,33 @@
 
 <body class="bg-black text-gray-900">
 
-    <!-- Navbar -->
-    <nav class="bg-transparent text-white p-4 fixed w-full top-0 shadow-md">
-        <div class="container mx-auto flex justify-between items-center mt-4">
-            <img src="assets/cmLogo.jpg" alt="" class="w-40 h-auto ml-16">
-            <button class="mr-16">
-                <img src="assets/menuSanduiche.png" alt="" class="w-10 h-auto">
-            </button>
-        </div>
-    </nav>
-
     <section class="dodeca-section">
         <canvas id="dodecaCanvas"></canvas>
     </section>
-
 
     <section class="second-canvas">
         <canvas id="dodecaCanvas2"></canvas>
     </section>
 
-    <section class="bg-transparent text-white text-center mt-20">
+    <section class="bg-transparent text-white text-center h-screen overflow-hidden">
+        <nav class="bg-transparent text-white p-4 w-full top-0 shadow-md">
+            <div class="container mx-auto flex justify-between items-center mt-4">
+                <img src="assets/cmLogo.jpg" alt="" class="w-40 h-auto ml-16">
+                <button class="mr-16">
+                    <img src="assets/menuSanduiche.png" alt="" class="w-10 h-auto">
+                </button>
+            </div>
+        </nav>
         <!-- bg-transparent -->
-        <div class="text-white bg-transparent text-center py-40 mt-40 w-[100%]">
+        <div class="text-white bg-transparent text-center mt-[7%] w-[100%]">
+
             <div class="text-left w-[80%] mx-auto">
                 <h1 class="OutfitTituloFino">
                     <span class="OutfitTitulo">Transformamos</span> seus ambientes<br> em uma extensão <span
                         class="OutfitTitulo">de você!</span>
                 </h1>
             </div>
-            <div class ="text-left w-[80%] mx-auto mt-10">
+            <div class="text-left w-[80%] mx-auto mt-10">
                 <p class="OutfitTextoCinza">
                     Proporcionar soluções tecnológicas integradas que traz<br>
                     segurança, conforto e praticidade através de automação,<br>
@@ -93,6 +91,103 @@
             </div>
         </div>
     </section>
+
+    <section class="h-screen bg-white flex flex-col justify-start items-center pt-10 space-y-10">
+        <!-- Título -->
+        <div>
+          <h1 class="OutfitTitulo text-[#cba34d]">
+            Nossos
+            <span class="OutfitTituloFino text-black">Serviços</span>
+          </h1>
+        </div>
+      
+        <!-- Card -->
+        <div class="flex flex-wrap justify-center gap-6 mt-10 px-4">
+          <!-- From Uiverse.io by gharsh11032000 -->
+          <div class="card">
+            <img src="assets/videoESom.png" alt="" class="w-full h-full object-cover">
+            <div class="card__content">
+              <p class="card__title">Vídeo e Som</p>
+              <p class="card__description">
+                Instalação e venda de acessórios de vídeo e som com qualidade, tecnologia e praticidade para transformar seu ambiente.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/camera.jpg" alt="" class="w-full h-full object-cover">
+            <div class="card__content">
+              <p class="card__title">Câmeras de segurança</p>
+              <p class="card__description">
+                Instalação e venda de câmeras de segurança com alta tecnologia para proteger seu patrimônio com qualidade e confiança.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/alarme.jpg" alt="" class="w-full h-full object-cover">
+            <div class="card__content">
+              <p class="card__title">Alarmes</p>
+              <p class="card__description">
+                Instalação e venda de alarmes modernos para garantir segurança, controle e tranquilidade em residências e empresas.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/antena.png" alt="" class="w-full h-full object-cover">
+            <div class="card__content">
+              <p class="card__title">Antenas digitais</p>
+              <p class="card__description">
+                Instalação e venda de antenas digitais e parabólicas para sinal de qualidade, imagem nítida e conexão estável em qualquer lugar.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/cabeamento.jpg" alt="" class="w-full h-full object-cover">
+            <div class="card__content">
+              <p class="card__title">cabeamento</p>
+              <p class="card__description">
+                Serviço de cabeamento estruturado para garantir conexões seguras, organizadas e de alto desempenho em redes e sistemas elétricos.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/fechadura.jpg" alt="" class="w-full h-full object-cover">
+            <div class="card__content">
+              <p class="card__title">Fechaduras digitais</p>
+              <p class="card__description">
+                Instalação e venda de fechaduras digitais que oferecem segurança, praticidade e controle de acesso com tecnologia moderna.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/casaInteligente.jpg" alt="" class="w-full h-full object-cover">
+            <div class="card__content">
+              <p class="card__title">Casa inteligente</p>
+              <p class="card__description">
+                Soluções em automação para casa inteligente, integrando segurança, conforto e tecnologia para facilitar seu dia a dia.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="assets/consultoria-empresarial.jpg" alt="" class="w-full h-full object-cover">
+            <div class="card__content">
+              <p class="card__title">Consultoria</p>
+              <p class="card__description">
+                Consultoria especializada em vídeo, som, segurança, antenas, cabeamento e fechaduras digitais para soluções completas e personalizadas.
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+      
+
     <script src="js/script.js"></script>
 </body>
 
