@@ -2,223 +2,463 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CM Tecnologias</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CM Tecnologias</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="bg-black text-gray-900">
 
-    <section class="dodeca-section">
-        <canvas id="dodecaCanvas"></canvas>
-    </section>
+  <section class="dodeca-section">
+    <canvas id="dodecaCanvas"></canvas>
+  </section>
 
-    <section class="second-canvas">
-        <canvas id="dodecaCanvas2"></canvas>
-    </section>
+  <section class="second-canvas">
+    <canvas id="dodecaCanvas2"></canvas>
+  </section>
 
-    <!-- home -->
-    <section class="bg-transparent text-white text-center h-screen overflow-hidden">
-        <nav class="bg-transparent text-white p-4 w-full top-0 shadow-md">
-            <div class="container mx-auto flex justify-between items-center mt-4">
-                <img src="assets/cmLogo.jpg" alt="" class="w-40 h-auto ml-16">
-                <button class="mr-16">
-                    <img src="assets/menuSanduiche.png" alt="" class="w-10 h-auto">
-                </button>
+  <!-- Navbar -->
+  <nav class="w-full bg-transparent shadow-md">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <img src="assets/cmLogo.jpg" alt="" class="w-40 h-auto ml-16">
+      <button id="menu-button" class="text-gray-500">
+        <i class="fas fa-bars text-4xl"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Overlay -->
+  <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50"></div>
+
+  <!-- Menu Modal -->
+  <div id="mobile-menu" class="hidden fixed inset-0 flex items-center justify-center z-50">
+    <div class="bg-white rounded-3xl shadow-xl p-8 w-full max-w-md relative">
+      <button id="close-menu" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+
+      <div class="flex flex-col items-center space-y-6">
+        <a href="#home" class="menu-link text-2xl font-medium hover:text-blue-600">Home</a>
+        <a href="#servicos" class="menu-link text-2xl font-medium hover:text-blue-600">Serviços</a>
+        <a href="#quemSomos" class="menu-link text-2xl font-medium hover:text-blue-600">Quem Somos</a>
+        <a href="#contatos" class="menu-link text-2xl font-medium hover:text-blue-600">Contatos</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- home -->
+  <section id="home" class="bg-transparent text-white text-center h-screen overflow-hidden">
+    <div class="text-white bg-transparent text-center mt-[12%] w-[100%]">
+
+      <div class="text-left w-[80%] mx-auto">
+        <h1 class="OutfitTituloFino">
+          <span class="OutfitTitulo">Transformamos</span> seus ambientes<br> em uma extensão <span
+            class="OutfitTitul">de você!</span>
+        </h1>
+      </div>
+      <div class="text-left w-[80%] mx-auto mt-10">
+        <p class="OutfitTextoCinza">
+          Proporcionar soluções tecnológicas integradas que traz<br>
+          segurança, conforto e praticidade através de automação,<br>
+          inteligência e inovação em todos os detalhes.
+        </p>
+      </div>
+      <div class="text-left w-[80%] mx-auto mt-10">
+        <a href="#servicos" class="botaoHome">
+          <button
+          class="bg-[#cba34d] text-center w-[280px] rounded-3xl h-14 relative text-black text-xl font-semibold group"
+          type="button">
+
+          <div
+            class="bg-black rounded-full h-12 w-1/4 flex items-center text-white justify-center absolute left-1 top-[4px] bottom-[4px] right-1 group-hover:w-[98%] z-10 duration-500">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+            <path d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z" fill="#000000"></path>
+            <path
+              d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
+              fill="#000000"></path>
+            </svg>
+          </div>
+
+          <p class="translate-x-8">Nossos Trabalhos</p>
+
+          </button>  
+        </a>
+        <a href="#contatos" class="botaoHome">
+          <button class="bg-black text-center w-[280px] rounded-3xl h-14 relative text-white text-xl font-semibold group"
+          type="button">
+
+            <div
+              class="bg-black rounded-full h-12 w-1/4 flex items-center text-white justify-center absolute left-1 top-[4px] bottom-[4px] right-1 group-hover:w-[98%] z-10 duration-500 border border-white">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
+              <path d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z" fill="#000000"></path>
+              <path
+                d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
+                fill="#000000"></path>
+              </svg>
             </div>
-        </nav>
-        <!-- bg-transparent -->
-        <div class="text-white bg-transparent text-center mt-[7%] w-[100%]">
 
-            <div class="text-left w-[80%] mx-auto">
-                <h1 class="OutfitTituloFino">
-                    <span class="OutfitTitulo">Transformamos</span> seus ambientes<br> em uma extensão <span
-                        class="OutfitTitulo">de você!</span>
-                </h1>
-            </div>
-            <div class="text-left w-[80%] mx-auto mt-10">
-                <p class="OutfitTextoCinza">
-                    Proporcionar soluções tecnológicas integradas que traz<br>
-                    segurança, conforto e praticidade através de automação,<br>
-                    inteligência e inovação em todos os detalhes.
-                </p>
-            </div>
-            <div class="text-left w-[80%] mx-auto mt-10">
-                <button
-                    class="bg-[#cba34d] text-center w-[280px] rounded-3xl h-14 relative text-black text-xl font-semibold group"
-                    type="button">
+            <p class="translate-x-6">Contato</p>
 
-                    <div
-                        class="bg-black rounded-full h-12 w-1/4 flex items-center text-white justify-center absolute left-1 top-[4px] bottom-[4px] right-1 group-hover:w-[98%] z-10 duration-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                        </svg>
-                        <path d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z" fill="#000000"></path>
-                        <path
-                            d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
-                            fill="#000000"></path>
-                        </svg>
-                    </div>
+          </button>
+        </a>
 
-                    <p class="translate-x-8">Nossos Trabalhos</p>
+      </div>
+    </div>
+  </section>
 
-                </button>
-                <button
-                    class="bg-black text-center w-[280px] rounded-3xl h-14 relative text-white text-xl font-semibold group"
-                    type="button">
+  <!-- serviços -->
+  <section id="servicos" class="h-screen bg-white flex flex-col justify-start items-center pt-10 space-y-10">
+    <!-- Título -->
+    <div>
+      <h1 class="OutfitTitulo text-[#cba34d]">
+        Nossos
+        <span class="OutfitTituloFino text-black">Serviços</span>
+      </h1>
+    </div>
 
-                    <div
-                        class="bg-black rounded-full h-12 w-1/4 flex items-center text-white justify-center absolute left-1 top-[4px] bottom-[4px] right-1 group-hover:w-[98%] z-10 duration-500 border border-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                        </svg>
-                        <path d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z" fill="#000000"></path>
-                        <path
-                            d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
-                            fill="#000000"></path>
-                        </svg>
-                    </div>
-
-                    <p class="translate-x-6">Contato</p>
-
-                </button>
-            </div>
+    <!-- Card -->
+    <div class="flex flex-wrap justify-center gap-6 mt-10 px-4 w-full h-full">
+      <!-- From Uiverse.io by gharsh11032000 -->
+      <div class="card">
+        <img src="assets/videoESom.png" alt="" class="w-full h-full object-cover">
+        <div class="card__content">
+          <p class="card__title">Vídeo e Som</p>
+          <p class="card__description">
+            Instalação e venda de acessórios de vídeo e som com qualidade, tecnologia e praticidade para transformar seu
+            ambiente.
+          </p>
         </div>
-    </section>
+      </div>
 
-    <!-- serviços -->
-    <section class="h-screen bg-white flex flex-col justify-start items-center pt-10 space-y-10">
-        <!-- Título -->
-        <div>
-          <h1 class="OutfitTitulo text-[#cba34d]">
-            Nossos
-            <span class="OutfitTituloFino text-black">Serviços</span>
-          </h1>
+      <div class="card">
+        <img src="assets/camera.jpg" alt="" class="w-full h-full object-cover">
+        <div class="card__content">
+          <p class="card__title">Câmeras de segurança</p>
+          <p class="card__description">
+            Instalação e venda de câmeras de segurança com alta tecnologia para proteger seu patrimônio com qualidade e
+            confiança.
+          </p>
         </div>
-      
-        <!-- Card -->
-        <div class="flex flex-wrap justify-center gap-6 mt-10 px-4 w-full h-full">
-          <!-- From Uiverse.io by gharsh11032000 -->
-          <div class="card">
-            <img src="assets/videoESom.png" alt="" class="w-full h-full object-cover">
-            <div class="card__content">
-              <p class="card__title">Vídeo e Som</p>
-              <p class="card__description">
-                Instalação e venda de acessórios de vídeo e som com qualidade, tecnologia e praticidade para transformar seu ambiente.
-              </p>
-            </div>
-          </div>
+      </div>
 
-          <div class="card">
-            <img src="assets/camera.jpg" alt="" class="w-full h-full object-cover">
-            <div class="card__content">
-              <p class="card__title">Câmeras de segurança</p>
-              <p class="card__description">
-                Instalação e venda de câmeras de segurança com alta tecnologia para proteger seu patrimônio com qualidade e confiança.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="assets/alarme.jpg" alt="" class="w-full h-full object-cover">
-            <div class="card__content">
-              <p class="card__title">Alarmes</p>
-              <p class="card__description">
-                Instalação e venda de alarmes modernos para garantir segurança, controle e tranquilidade em residências e empresas.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="assets/antena.png" alt="" class="w-full h-full object-cover">
-            <div class="card__content">
-              <p class="card__title">Antenas digitais</p>
-              <p class="card__description">
-                Instalação e venda de antenas digitais e parabólicas para sinal de qualidade, imagem nítida e conexão estável em qualquer lugar.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="assets/cabeamento.jpg" alt="" class="w-full h-full object-cover">
-            <div class="card__content">
-              <p class="card__title">cabeamento</p>
-              <p class="card__description">
-                Serviço de cabeamento estruturado para garantir conexões seguras, organizadas e de alto desempenho em redes e sistemas elétricos.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="assets/fechadura.jpg" alt="" class="w-full h-full object-cover">
-            <div class="card__content">
-              <p class="card__title">Fechaduras digitais</p>
-              <p class="card__description">
-                Instalação e venda de fechaduras digitais que oferecem segurança, praticidade e controle de acesso com tecnologia moderna.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="assets/casaInteligente.jpg" alt="" class="w-full h-full object-cover">
-            <div class="card__content">
-              <p class="card__title">Casa inteligente</p>
-              <p class="card__description">
-                Soluções em automação para casa inteligente, integrando segurança, conforto e tecnologia para facilitar seu dia a dia.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="assets/consultoria-empresarial.jpg" alt="" class="w-full h-full object-cover">
-            <div class="card__content">
-              <p class="card__title">Consultoria</p>
-              <p class="card__description">
-                Consultoria especializada em vídeo, som, segurança, antenas, cabeamento e fechaduras digitais para soluções completas e personalizadas.
-              </p>
-            </div>
-          </div>
-
-
+      <div class="card">
+        <img src="assets/alarme.jpg" alt="" class="w-full h-full object-cover">
+        <div class="card__content">
+          <p class="card__title">Alarmes</p>
+          <p class="card__description">
+            Instalação e venda de alarmes modernos para garantir segurança, controle e tranquilidade em residências e
+            empresas.
+          </p>
         </div>
-      </section>
+      </div>
 
-      <section class="bg-black text-white h-screen overflow-hidden flex items-center justify-start px-6">
-        <div class="ml-[7vh] max-w-3xl">
-          <div class="OutfitTituloBold mb-[4vh] ml-[6vh]">
-            <h1 class="mb-[0vh]">QUEM</h1>
-            <h1 class="text-[#cba34d] ml-[6vh] mt-[-2vh]">SOMOS?</h1>
-          </div>
-          <div class="OutfitTextoBranco mt-4 space-y-4">
-            <p class="mb-[2vh]">
-              A <span class="OutfitTextoDourado">CM SOLUÇÕES EM TECNOLOGIAS</span> é uma empresa especializada em
-              soluções inovadoras para <span class="OutfitTextoCinza">segurança</span>, <span class="OutfitTextoCinza">conectividade</span> e <span class="OutfitTextoCinza">automação</span>.
-              Atuamos em <span class="OutfitTextoDourado">Goiânia e região</span>, oferecendo serviços de instalação,
-              manutenção e consultoria em áudio e vídeo, câmeras de segurança, redes
-              Wi-Fi, fechaduras digitais, automação residencial e corporativa, controle
-              de acessos, alarmes e antenas digitais.
-            </p>
-            <p>
-              Nosso compromisso é proporcionar <span class="OutfitTextoDourado">tecnologia de ponta</span> para tornar
-              ambientes mais seguros, inteligentes e conectados. Seja para projetos
-              residenciais, comerciais ou empresariais, garantimos um atendimento
-              personalizado e soluções eficientes para atender às suas necessidades.
-              Conte com a <span class="OutfitTextoCinza">CM SOLUÇÕES EM TECNOLOGIAS</span> para transformar sua
-              experiência com tecnologia!
-            </p>
-          </div>
+      <div class="card">
+        <img src="assets/antena.png" alt="" class="w-full h-full object-cover">
+        <div class="card__content">
+          <p class="card__title">Antenas digitais</p>
+          <p class="card__description">
+            Instalação e venda de antenas digitais e parabólicas para sinal de qualidade, imagem nítida e conexão
+            estável em qualquer lugar.
+          </p>
         </div>
-      </section>
-      
-      
+      </div>
 
-    <script src="js/script.js"></script>
+      <div class="card">
+        <img src="assets/cabeamento.jpg" alt="" class="w-full h-full object-cover">
+        <div class="card__content">
+          <p class="card__title">cabeamento</p>
+          <p class="card__description">
+            Serviço de cabeamento estruturado para garantir conexões seguras, organizadas e de alto desempenho em redes
+            e sistemas elétricos.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/fechadura.jpg" alt="" class="w-full h-full object-cover">
+        <div class="card__content">
+          <p class="card__title">Fechaduras digitais</p>
+          <p class="card__description">
+            Instalação e venda de fechaduras digitais que oferecem segurança, praticidade e controle de acesso com
+            tecnologia moderna.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/casaInteligente.jpg" alt="" class="w-full h-full object-cover">
+        <div class="card__content">
+          <p class="card__title">Casa inteligente</p>
+          <p class="card__description">
+            Soluções em automação para casa inteligente, integrando segurança, conforto e tecnologia para facilitar seu
+            dia a dia.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/consultoria-empresarial.jpg" alt="" class="w-full h-full object-cover">
+        <div class="card__content">
+          <p class="card__title">Consultoria</p>
+          <p class="card__description">
+            Consultoria especializada em vídeo, som, segurança, antenas, cabeamento e fechaduras digitais para soluções
+            completas e personalizadas.
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section id="quemSomos" class="bg-black text-white h-screen overflow-hidden flex items-center justify-start px-6">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="ml-[7vh] max-w-3xl">
+        <div class="OutfitTituloBold mb-[4vh] ml-[6vh]">
+          <h1 class="mb-[0vh]">QUEM</h1>
+          <h1 class="text-[#cba34d] ml-[6vh] mt-[-2vh]">SOMOS?</h1>
+        </div>
+        <div class="OutfitTextoBranco mt-4 space-y-4">
+          <p class="mb-[2vh]">
+            A <span class="OutfitTextoDourado">CM SOLUÇÕES EM TECNOLOGIAS</span> é uma empresa especializada em
+            soluções inovadoras para <span class="OutfitTextoCinza">segurança</span>, <span
+              class="OutfitTextoCinza">conectividade</span> e <span class="OutfitTextoCinza">automação</span>.
+            Atuamos em <span class="OutfitTextoDourado">Goiânia e região</span>, oferecendo serviços de instalação,
+            manutenção e consultoria em áudio e vídeo, câmeras de segurança, redes
+            Wi-Fi, fechaduras digitais, automação residencial e corporativa, controle
+            de acessos, alarmes e antenas digitais.
+          </p>
+          <p>
+            Nosso compromisso é proporcionar <span class="OutfitTextoDourado">tecnologia de ponta</span> para tornar
+            ambientes mais seguros, inteligentes e conectados. Seja para projetos
+            residenciais, comerciais ou empresariais, garantimos um atendimento
+            personalizado e soluções eficientes para atender às suas necessidades.
+            Conte com a <span class="OutfitTextoCinza">CM SOLUÇÕES EM TECNOLOGIAS</span> para transformar sua
+            experiência com tecnologia!
+          </p>
+        </div>
+      </div>
+      <div>
+        <a href="https://maps.app.goo.gl/gnNehR1syLo868nt5" target="_blank" rel="noopener noreferrer">
+          <button>
+            <img src="assets/mapaComIcone.png" alt=""
+              class="w-[60vh] transition-transform duration-500 ease-in-out hover:scale-110">
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="missao" class="bg-black text-white h-screen overflow-hidden flex items-center justify-start px-3">
+    <div class="container mx-auto px-1 py-2 flex justify-between items-center">
+      <div class=" ml-[7vh] max-w-3xl">
+        <div class="OutfitTituloBold mb-[4vh] ml-[6vh]">
+          <h1 class="mb-[0vh]">Missão,</h1>
+          <h1 class="text-[#cba34d] mt-[-1vh]">Visão,</h1>
+          <h1 class="text-[#605d59] mt-[-1vh] mb-[4vh]">Valores</h1>
+          <svg fill="#ffffff" height="40vh" width="40vh" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 311.633 311.633" xml:space="preserve"
+            stroke="#ffffff">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <g>
+                  <g>
+                    <path
+                      d="M157.727,37.75c-50.524,0-91.632,41.1-91.632,91.624c0,33.772,18.332,64.42,48.004,80.5l-1.7,14.024 c0,8.176,4.104,15.4,10.352,19.748c-4.396,2.548-7.416,7.376-7.416,12.972c0,5.756,3.188,10.704,7.796,13.184 c-2.424,2.568-3.94,6.004-3.94,9.804c0,7.896,6.428,14.328,14.328,14.328h0.472c-0.004,0.044-0.024,0.08-0.024,0.124 c0,9.856,11.084,17.576,25.224,17.576c5.54,0,10.784-1.204,15.16-3.472c1.532-0.788,2.128-2.672,1.332-4.204 c-0.792-1.524-2.664-2.136-4.204-1.332c-3.444,1.78-7.808,2.768-12.288,2.768c-10.292,0-18.984-5.192-18.984-11.34 c0-0.044-0.024-0.08-0.028-0.124h41.748c7.896,0,14.328-6.428,14.328-14.328c0-7.008-5.068-12.832-11.724-14.064 c-0.38-0.168-0.796-0.264-1.24-0.264h-1.36h-48.408h-3.86c-4.46,0-8.088-3.884-8.088-8.66c0-4.78,3.628-8.664,8.088-8.664h6.788 h42.54h6.792c4.46,0,8.088,3.884,8.088,8.664c0,2.508,0,2.508-1.748,4.924c-1.008,1.392-0.696,3.344,0.7,4.352 c1.388,1.004,3.34,0.696,4.352-0.7c2.716-3.748,2.936-4.392,2.936-8.58c0-8.216-6.428-14.904-14.328-14.904h-6.792h-42.54 c-9.824,0-17.816-7.996-17.844-17.44l1.936-15.78l-1.672-3.152c-28.708-14.7-46.536-43.808-46.536-75.96 c0-47.084,38.304-85.388,85.392-85.388c47.084,0,85.384,38.304,85.384,85.388c0,32.148-17.832,61.26-46.532,75.972l-1.672,3.156 l1.908,15.396c0,4.784-1.892,9.288-5.328,12.672c-1.228,1.208-1.24,3.184-0.032,4.408c1.208,1.224,3.184,1.24,4.408,0.032 c4.64-4.572,7.196-10.648,7.168-17.492l-1.672-13.648c29.66-16.084,47.992-46.728,47.992-80.5 C249.351,78.854,208.247,37.75,157.727,37.75z M133.523,271.521h48.408c4.46,0,8.088,3.628,8.088,8.088s-3.628,8.088-8.088,8.088 h-48.408c-4.46,0-8.088-3.628-8.088-8.088C125.435,275.15,129.063,271.521,133.523,271.521z">
+                    </path>
+                    <path
+                      d="M195.627,177.769c1.18-0.288,1.904-1.476,1.616-2.66c-0.288-1.18-1.496-1.904-2.656-1.616 c-4.808,1.18-10.2-0.456-14.416-4.352c-0.004-0.008-0.012-0.016-0.02-0.02c3.548-4.672,5.24-10.444,4.664-15.988 c-0.312-2.972-1.32-5.004-3.08-6.212c-1.66-1.136-3.628-1.312-5.54-0.496c-2.82,1.204-5.268,4.56-5.824,7.976 c-0.82,5.024,0.608,10.28,3.864,14.684c-2.536,2.276-5.544,3.64-8.672,3.904c-3.52,0.3-7.184-1.08-10.092-3.66 c2.324-3.8,3.736-7.808,4.588-11.14c1.012-3.944,0.5-6.868-1.512-8.692c-1.448-1.308-3.332-1.736-5.296-1.216 c-2.82,0.752-5.468,3.396-6.44,6.42c-1.6,4.94-0.484,10.388,3.044,15.008c-1.312,1.652-2.856,3.18-4.684,4.464 c-0.248,0.176-0.508,0.344-0.76,0.504c-1.952-5.3-4.5-10.376-7.78-15.156c-3.868-5.624-7.572-6.332-10.004-5.912 c-1.548,0.252-3.036,1.04-4.436,2.328c-2.804,2.596-4.272,6.516-4.012,10.756c0.288,4.788,2.636,9.22,6.276,11.856 c4.78,3.456,11.296,4.172,17.324,2.192c4.944,16.716,4.384,35.608,2.752,54.052c-0.108,1.212,0.788,2.28,2,2.384 c0.064,0.004,0.128,0.008,0.196,0.008c1.124,0,2.084-0.864,2.188-2.008c1.692-19.112,2.244-38.728-3.072-56.232 c0.636-0.36,1.256-0.752,1.86-1.176c2.02-1.416,3.744-3.072,5.212-4.848c3.752,3.172,8.484,4.82,13.02,4.448 c4.1-0.348,7.992-2.1,11.24-5.016c0.004,0.004,0.004,0.004,0.008,0.008C182.479,177.269,189.371,179.285,195.627,177.769z M127.031,174.985c-2.548-1.844-4.26-5.12-4.464-8.556c-0.18-2.956,0.748-5.532,2.612-7.26c0.74-0.684,1.488-1.104,2.16-1.22 c0.144-0.02,0.28-0.032,0.416-0.032c2.1,0,4.16,2.524,5.244,4.1c3.132,4.556,5.552,9.428,7.396,14.532 C135.695,178.07,130.615,177.573,127.031,174.985z M152.463,165.75c-1.928-3.136-2.468-6.588-1.46-9.696 c0.508-1.58,2.028-3.16,3.388-3.52c0.18-0.048,0.336-0.072,0.468-0.072c0.352,0,0.568,0.14,0.732,0.292 c0.688,0.624,0.76,2.168,0.208,4.34C155.131,159.701,154.087,162.773,152.463,165.75z M174.715,155.109 c0.312-1.904,1.784-4.028,3.212-4.64c0.256-0.112,0.472-0.156,0.652-0.156c0.28,0,0.492,0.108,0.672,0.232 c0.612,0.42,1.02,1.472,1.192,3.044c0.42,4.064-0.772,8.456-3.224,12.072C175.055,162.393,174.139,158.654,174.715,155.109z">
+                    </path>
+                    <path
+                      d="M179.407,178.958c-8.268,18.016-10.476,37.244-6.772,56.708c0.528,2.78,4.772,1.604,4.244-1.168 c-3.464-18.196-1.408-36.46,6.328-53.316C184.379,178.621,180.587,176.381,179.407,178.958z">
+                    </path>
+                    <path
+                      d="M194.783,61.734c-2.456-1.416-4.676,2.384-2.22,3.8c21.544,12.404,33.632,35.796,31.484,60.532 c-0.248,2.82,4.156,2.804,4.4,0C230.723,99.838,217.571,74.854,194.783,61.734z">
+                    </path>
+                    <path
+                      d="M225.675,149.149c2.28-4.128,2.964-8.608,2.172-13.24c-0.476-2.784-4.716-1.604-4.244,1.172 c0.588,3.428-0.056,6.816-1.728,9.848C220.503,149.414,224.303,151.633,225.675,149.149z">
+                    </path>
+                    <path
+                      d="M93.779,90.149c-6.652,10.196-10.204,21.604-10.616,33.768c-0.096,2.832,4.304,2.828,4.4,0 c0.388-11.452,3.756-21.948,10.016-31.544C99.127,89.993,95.319,87.786,93.779,90.149z">
+                    </path>
+                    <path
+                      d="M83.503,134.878c-1,5.444-0.056,10.808,2.96,15.476c1.532,2.368,5.344,0.168,3.8-2.22 c-2.356-3.644-3.304-7.796-2.516-12.088C88.255,133.278,84.015,132.089,83.503,134.878z">
+                    </path>
+                    <path
+                      d="M151.571,16.086V2.125c0-2.832-4.4-2.836-4.4,0v13.96C147.171,18.917,151.571,18.922,151.571,16.086z">
+                    </path>
+                    <path
+                      d="M265.939,55.297c-5.264,3.5-10.532,7-15.796,10.5c-2.348,1.56-0.148,5.376,2.22,3.8c5.264-3.5,10.532-7,15.796-10.5 C270.507,57.537,268.307,53.721,265.939,55.297z">
+                    </path>
+                    <path
+                      d="M46.231,81.534c-2.008-2.004-5.12,1.104-3.112,3.112c3.724,3.72,7.448,7.444,11.168,11.168 c2.008,2.004,5.12-1.104,3.112-3.112C53.675,88.982,49.955,85.258,46.231,81.534z">
+                    </path>
+                    <path
+                      d="M93.171,45.018c1.584,2.328,5.4,0.128,3.8-2.22c-2.832-4.16-5.66-8.324-8.496-12.484 c-1.584-2.328-5.396-0.132-3.796,2.22C87.511,36.693,90.343,40.857,93.171,45.018z">
+                    </path>
+                    <path
+                      d="M210.915,38.549c2.684-3.344,5.364-6.692,8.048-10.036c1.756-2.188-1.34-5.32-3.112-3.112 c-2.684,3.348-5.364,6.692-8.048,10.036C206.047,37.625,209.143,40.758,210.915,38.549z">
+                    </path>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class=" text-left">
+        <div class="container ml-auto px-2 py-1 flex justify-between items-center  w-[70%]">
+          <svg class="transition-transform duration-500 ease-in-out hover:scale-110" fill="#ffffff" height="30vh" width="30vh" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" stroke="#ffffff">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M30.9,5.6C30.8,5.2,30.4,5,30,5h-3V2c0-0.4-0.2-0.8-0.6-0.9C26,0.9,25.6,1,25.3,1.3l-4,4C21.1,5.5,21,5.7,21,6v3.6l-5.7,5.7 c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l5.7-5.7H26c0.3,0,0.5-0.1,0.7-0.3l4-4C31,6.4,31.1,6,30.9,5.6z">
+              </path>
+              <path
+                d="M18.1,18.1C17.6,18.7,16.8,19,16,19s-1.6-0.3-2.1-0.9c-1.2-1.2-1.2-3.1,0-4.2l2.8-2.8C16.5,11,16.2,11,16,11 c-2.8,0-5,2.2-5,5s2.2,5,5,5s5-2.2,5-5c0-0.2,0-0.5-0.1-0.7L18.1,18.1z">
+              </path>
+              <path
+                d="M28.1,12.1C27.6,12.7,26.8,13,26,13h-2.8l-0.7,0.7c0.3,0.7,0.4,1.5,0.4,2.3c0,3.9-3.1,7-7,7s-7-3.1-7-7s3.1-7,7-7 c0.8,0,1.6,0.2,2.3,0.4L19,8.8V6c0-0.8,0.3-1.6,0.9-2.1l1-1C19.3,2.3,17.7,2,16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14 c0-1.7-0.3-3.3-0.9-4.9L28.1,12.1z">
+              </path>
+            </g>
+          </svg>
+          <p class="OutfitTextoBranco ml-[5vh]">Proporcionar soluções tecnológicas integradas que traz segurança,
+            conforto e praticidade através de automação, inteligência e inovação em todos os detalhes.</p>
+        </div>
+
+        <div class="container ml-auto px-2 py-1 flex justify-between items-center  w-[70%]">
+          <svg class="transition-transform duration-500 ease-in-out hover:scale-110" fill="#cba34d" height="30vh" width="30vh" viewBox="0 -1.5 35 35" version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <title>eye</title>
+              <path
+                d="M17.162 4.341c-10.562 0-17.162 11.659-17.162 11.659s6.537 11.659 17.162 11.659c9.938 0 17.481-11.659 17.481-11.659s-7.481-11.659-17.481-11.659zM17.256 21.251c-2.894 0-5.238-2.345-5.238-5.238s2.345-5.239 5.238-5.239 5.239 2.346 5.239 5.239-2.346 5.238-5.239 5.238zM17.288 13.394c-1.44 0-2.607 1.168-2.607 2.607s1.167 2.607 2.607 2.607 2.607-1.167 2.607-2.607c0.001-1.439-1.166-2.607-2.607-2.607z">
+              </path>
+            </g>
+          </svg>
+          <p class="OutfitTextoBranco ml-[5vh]">Ser a principal escolha para quem busca transformar seu ambiente em um
+            espaço inteligente, seguro, controlável, confortável e conectado, através da integração de soluções.</p>
+        </div>
+
+        <div class="container ml-auto px-2 py-1 flex justify-between items-center  w-[70%]">
+          <svg class="transition-transform duration-500 ease-in-out hover:scale-110" fill="#605d59" height="30vh" width="30vh" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 433.715 433.715" xml:space="preserve">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <g>
+                  <path
+                    d="M223.365,365.711c0-1.814,0-7.336-10.319-7.336c-1.895,0-3.483,0.09-4.74,0.266v14.639h4.897 C219.376,373.279,223.365,370.309,223.365,365.711z">
+                  </path>
+                  <path
+                    d="M225.016,389.988c0-8.035-8.646-8.904-12.362-8.904h-4.348v17.736c1.083,0.104,2.526,0.152,4.426,0.152 C217.319,398.973,225.016,397.807,225.016,389.988z">
+                  </path>
+                  <path
+                    d="M70.622,368.373c-0.618-1.814-1.13-3.541-1.589-5.209c-0.503,1.832-0.996,3.508-1.502,5.104l-4.608,13.615h12.295 L70.622,368.373z">
+                  </path>
+                  <path
+                    d="M14.255,323.714h0.013v110.001h110V323.714h-0.013l0.136-0.323h-110L14.255,323.714z M74.291,350.927L93.255,406.5H83.179 l-5.657-16.654H60.628l-5.5,16.654h-9.846l18.882-55.573H74.291z">
+                  </path>
+                  <path
+                    d="M309.459,323.714h-0.013v110.001h110V323.714h0.013l-0.136-0.323h-110L309.459,323.714z M371.862,350.102 c7.771,0,12.051,1.918,13.178,2.504l0.956,0.5l-2.393,8.094l-1.39-0.674c-2.751-1.336-6.344-2.07-10.114-2.07 c-12.12,0-19.355,7.678-19.355,20.533c0,12.514,7.118,19.984,19.04,19.984c3.902,0,7.958-0.791,10.585-2.068l1.438-0.697 l2.085,7.992l-0.95,0.477c-2.566,1.283-7.741,2.65-14.572,2.65c-16.688,0-27.474-11.029-27.474-28.102 C342.896,362.076,354.808,350.102,371.862,350.102z">
+                  </path>
+                  <polygon
+                    points="147.494,268.215 147.51,268.215 147.51,202.7 161.857,202.7 161.857,306.857 271.857,306.857 271.857,202.7 286.204,202.7 286.204,268.215 286.222,268.215 302.4,306.857 412.4,306.857 396.222,268.215 396.204,268.215 396.204,202.7 426.981,202.7 341.203,86.358 271.857,180.416 271.857,116.341 302.634,116.341 216.857,0 131.082,116.341 161.857,116.341 161.857,180.416 92.511,86.358 6.733,202.7 37.51,202.7 37.51,268.215 37.494,268.215 21.314,306.857 131.314,306.857 ">
+                  </polygon>
+                  <path
+                    d="M161.857,323.714v110.001h110V323.714v-0.323h-110V323.714z M199.892,351.623c3.306-0.695,8.196-1.129,12.763-1.129 c7.085,0,11.822,1.275,15.359,4.142c3.182,2.362,4.886,5.96,4.886,10.368c0,4.77-2.621,8.988-7.008,11.547 c4.611,2.092,8.973,6.477,8.973,13.518c0,4.521-1.64,8.406-4.876,11.547c-3.922,3.588-10.2,5.32-19.22,5.32 c-5.337,0-9.048-0.402-10.786-0.641l-1.131-0.154v-54.299L199.892,351.623z">
+                  </path>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <p class="OutfitTextoBranco ml-[5vh]">Ética, Confiança, Liderança, Foco no cliente, Excelência,
+            Reconhecimento, Consciência Social, Organização, Agilidade, Espiritualidade, Pensamento crítico, Liberdade
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contatos" class="bg-white text-black h-[50vh] overflow-hidden flex items-center justify-start px-3">
+
+  </section>
+
+  <script src="js/script.js"></script>
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const closeButton = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('overlay');
+    const menuLinks = document.querySelectorAll('.menu-link');
+    const botaoHome = document.querySelectorAll('.botaoHome');
+
+    // Abrir menu
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      overlay.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+
+    // Fechar menu (botão X ou overlay)
+    const closeMenu = () => {
+      mobileMenu.classList.add('hidden');
+      overlay.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    };
+
+    closeButton.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    // Fechar menu + scroll suave ao clicar nos links
+    menuLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+
+        closeMenu(); // Fecha o modal
+
+        // Scroll suave após 300ms (tempo para o modal fechar)
+        setTimeout(() => {
+          targetSection.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }, 500);
+      });
+    });
+
+    botaoHome.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+
+        setTimeout(() => {
+          targetSection.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }, 200);
+      });
+    });
+  </script>
 </body>
 
 </html>
