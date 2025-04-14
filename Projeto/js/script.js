@@ -1,5 +1,3 @@
-
-
 // Seleciona o canvas
 const canvas = document.getElementById("dodecaCanvas");
 
@@ -85,8 +83,6 @@ window.addEventListener("resize", redimensionarRenderizador);
 
 iniciarCena();
 
-
-
 // Canvas 2
 const canvas2 = document.getElementById("dodecaCanvas2");
 
@@ -143,5 +139,3 @@ function iniciarCena2() {
 
 window.addEventListener("resize", redimensionarRenderizador2);
 iniciarCena2();
-
-    
