@@ -610,6 +610,15 @@ body {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: bold;
+    font-size: 8vh;
+    line-height: 8vh;
+  }
+
+  #missao .OutfitTituloBold{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: bold;
     font-size: 7vh;
     line-height: 7vh;
   }
@@ -628,4 +637,138 @@ body {
   {
     max-width: 80vh;
   }
+}
+
+@media (max-width: 1025px){
+  .imagemMapa{
+    width: 100vh;
+    margin-top: 90px;
+    margin-left: 50px;
+  }
+
+  #missao .OutfitTextoBranco{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 2.3vh;
+    line-height: 3vh;
+    color: white;
+  }
+}
+
+@media (max-width: 920px){
+  .card {
+    position: relative;
+    width: 28.8vh;              /* Aproximadamente 300px */
+    height: 20vh;            /* Aproximadamente 200px */
+    background: #cba34d;
+    border-radius: 1.5vh;    /* Aproximadamente 10px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+}
+
+@media (max-width: 768px){
+  .dodeca-section{
+    display: none;
+  }
+
+  .card{
+    width: 26vh;
+    height: 18vh;
+  }
+
+  #MissaoDivContainer {
+    flex-direction: column;
+  }
+
+  #MissaoDivContainer .OutfitTituloBold{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: bold;
+    font-size: 6vh;
+    line-height: 6vh;
+    padding: 0 0 0 0;
+  }
+
+  .svgLampada{
+    display: none;
+  }
+
+  #missaoDiv, #visaoDiv, #valoresDiv{
+    width: 95%;
+    margin: 0;
+    text-align: center;
+    height: 25%;
+  }
+
+  #mvvDiv {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  .imagemMapa{
+    width: 50%;
+    margin-top: 20px;
+    align-self: center;
+    margin: auto;
+  }
+
+  #quemSomos .OutfitTextoBranco{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 2vh;
+    line-height: 3vh;
+    color: white;
+  }
+
+  #quemSomos .OutfitTextoCinza {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2vh;
+    line-height: 3vh;
+    color: #605d59;
+  }
+
+  #quemSomos .OutfitTextoDourado {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style:italic;
+    font-size: 2vh;
+    line-height: 3vh;
+    color: #cba34d;
+  }
+
+  #quemSomos .OutfitTituloBold{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 6vh;
+    line-height: 6vh;
+  }
+
+  #containerQuemSomos {
+    flex-direction: column;
+    justify-items: center;
+    padding: 10px;
+    align-items: center;
+    margin: auto;
+  }
+
+  .imagemDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;}
 }

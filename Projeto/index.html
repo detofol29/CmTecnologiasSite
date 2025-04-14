@@ -106,11 +106,11 @@
           </button>  
         </a>
         <a href="#contatos" class="botaoHome">
-          <button class="bg-black text-center w-[280px] rounded-3xl h-14 relative text-white text-xl font-semibold group"
+          <button class="bg-transparent text-center w-[280px] rounded-3xl h-14 relative text-white text-xl font-semibold group"
           type="button">
 
             <div
-              class="bg-black rounded-full h-12 w-1/4 flex items-center text-white justify-center absolute left-1 top-[4px] bottom-[4px] right-1 group-hover:w-[98%] z-10 duration-500 border border-white">
+              class="bg-transparent rounded-full h-12 w-1/4 flex items-center text-white justify-center absolute left-1 top-[4px] bottom-[4px] right-1 group-hover:w-[98%] z-10 duration-500 border border-white">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -142,7 +142,7 @@
     </div>
 
     <!-- Card -->
-    <div class="flex flex-wrap justify-center gap-6 mt-10 px-4 max-w-[200vh] w-full h-full">
+    <div class="flex flex-wrap justify-center gap-4 mt-5 pb-10 px-4 max-w-[200vh] w-full h-full">
       <!-- From Uiverse.io by gharsh11032000 -->
       <div class="card">
         <img src="assets/videoESom.png" alt="" class="w-full h-full object-cover">
@@ -235,9 +235,9 @@
     </div>
   </section>
 
-  <section id="quemSomos" class="bg-black text-white h-screen overflow-hidden flex items-center justify-start px-6">
-    <div class="container mx-auto px-1 py-3 flex justify-between items-center">
-      <div class="ml-[7vh] max-w-3xl">
+  <section id="quemSomos" class="bg-black text-white h-screen overflow-hidden flex items-center justify-start">
+    <div id="containerQuemSomos" class="container mx-auto px-1 py-3 flex justify-between items-center">
+      <div class="mx-auto max-w-3xl">
         <div class="OutfitTituloBold mb-[4vh] ml-[6vh]">
           <h1 class="mb-[0vh]">QUEM</h1>
           <h1 class="text-[#cba34d] ml-[6vh] mt-[-2vh]">SOMOS?</h1>
@@ -262,7 +262,7 @@
           </p>
         </div>
       </div>
-      <div>
+      <div class="imagemDiv mx-auto">
         <a href="https://maps.app.goo.gl/gnNehR1syLo868nt5" target="_blank" rel="noopener noreferrer">
           <button>
             <img src="assets/mapaComIcone.png" alt=""
@@ -273,16 +273,16 @@
     </div>
   </section>
 
-  <section id="missao" class="bg-black text-white h-screen overflow-hidden flex items-center justify-start px-3">
-    <div class="container mx-auto px-1 py-2 flex justify-between items-center">
-      <div class=" ml-[7vh] max-w-3xl">
-        <div class="OutfitTituloBold mb-[4vh] ml-[6vh]">
+  <section id="missao" class="bg-black text-white h-screen overflow-hidden flex justify-start px-3">
+    <div id="MissaoDivContainer" class="container mx-auto px-1 py-2 flex justify-between items-center my-5">
+      <div class=" max-w-3xl">
+        <div id="mvvDiv" class="OutfitTituloBold mb-[4vh] ml-[6vh]">
           <h1 class="mb-[0vh]">Missão,</h1>
           <h1 class="text-[#cba34d] mt-[-1vh]">Visão,</h1>
           <h1 class="text-[#605d59] mt-[-1vh] mb-[4vh]">Valores</h1>
-          <svg fill="#ffffff" height="40vh" width="40vh" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+          <svg fill="#ffffff" height="40vh" width="30vh" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 311.633 311.633" xml:space="preserve"
-            stroke="#ffffff">
+            stroke="#ffffff" class="svgLampada">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
             <g id="SVGRepo_iconCarrier">
@@ -332,8 +332,8 @@
           </svg>
         </div>
       </div>
-      <div class=" text-left">
-        <div class="container ml-auto px-2 py-1 flex justify-between items-center  w-[70%]">
+      <div class=" text-left ml-[3vh]">
+        <div id="missaoDiv" class="container ml-auto px-2 py-1 flex justify-between items-center  w-[75%]">
           <svg class="transition-transform duration-500 ease-in-out hover:scale-110" fill="#ffffff" height="30vh" width="30vh" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" stroke="#ffffff">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -354,7 +354,7 @@
             conforto e praticidade através de automação, inteligência e inovação em todos os detalhes.</p>
         </div>
 
-        <div class="container ml-auto px-2 py-1 flex justify-between items-center  w-[70%]">
+        <div id="visaoDiv" class="container ml-auto px-2 py-1 flex justify-between items-center  w-[75%]">
           <svg class="transition-transform duration-500 ease-in-out hover:scale-110" fill="#cba34d" height="30vh" width="30vh" viewBox="0 -1.5 35 35" version="1.1"
             xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -370,7 +370,7 @@
             espaço inteligente, seguro, controlável, confortável e conectado, através da integração de soluções.</p>
         </div>
 
-        <div class="container ml-auto px-2 py-1 flex justify-between items-center  w-[70%]">
+        <div id="valoresDiv" class="container ml-auto px-2 py-1 flex justify-between items-center  w-[75%]">
           <svg class="transition-transform duration-500 ease-in-out hover:scale-110" fill="#605d59" height="30vh" width="30vh" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 433.715 433.715" xml:space="preserve">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -473,8 +473,8 @@
     </div>
   </section>
 
-  <footer class="bg-black text-white px-4 py-6 text-sm">
-    <div class="flex flex-wrap justify-between items-start gap-6 mx-[40vh]">
+  <footer class="bg-black text-white px-6 py-4 text-sm">
+    <div class="flex flex-wrap justify-between items-start gap-4 mx-[30vh]">
       
       <!-- Logo -->
       <div class="flex-shrink-0">
