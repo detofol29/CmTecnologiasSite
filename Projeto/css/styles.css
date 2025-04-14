@@ -540,3 +540,92 @@ body {
 .Btn2:active {
   transform: translate(2px, 2px);
 }
+
+.textoQuemSomos{
+  width: auto;
+}
+
+/* Celulares pequenos (até 480px)
+@media (max-width: 480px) { ... }
+
+/* Celulares médios e grandes */
+/* @media (max-width: 768px) { ... } */
+
+/* Tablets e telas menores */
+/* @media (max-width: 992px) { ... }  */
+
+/* Laptops e desktops */
+@media (max-width: 1409px) {
+  .card {
+    position: relative;
+    width: 35vh;              /* Aproximadamente 300px */
+    height: 25vh;            /* Aproximadamente 200px */
+    background: #cba34d;
+    border-radius: 1.5vh;    /* Aproximadamente 10px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+}
+
+@media (max-width: 1280px) {
+  .second-canvas{
+    display: none;
+  }
+
+  #quemSomos .OutfitTextoBranco{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 2vh;
+    line-height: 3vh;
+    color: white;
+  }
+
+  #quemSomos .OutfitTextoCinza {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2vh;
+    line-height: 3vh;
+    color: #605d59;
+  }
+
+  #quemSomos .OutfitTextoDourado {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style:italic;
+    font-size: 2vh;
+    line-height: 3vh;
+    color: #cba34d;
+  }
+
+  #quemSomos .OutfitTituloBold{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 7vh;
+    line-height: 7vh;
+  }
+
+  #missao .OutfitTextoBranco{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 2.5vh;
+    line-height: 3vh;
+    color: white;
+  }
+
+  .textoQuemSomos 
+  {
+    max-width: 80vh;
+  }
+}
