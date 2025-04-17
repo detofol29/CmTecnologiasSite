@@ -9,6 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
 
 <body class="bg-black text-gray-900">
@@ -39,7 +40,7 @@
   <!-- Navbar -->
   <nav class="w-full bg-transparent shadow-md">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <img src="assets/cmLogo.jpg" alt="" class="w-40 h-auto ml-16">
+      <img src="assets/cmLogo.jpg" alt="" class="w-40 h-auto ml-16 logo">
       <button id="menu-button" class="text-gray-500">
         <i class="fas fa-bars text-4xl"></i>
       </button>
@@ -236,6 +237,7 @@
     </div>
   </section>
 
+  <!-- quem somos -->
   <section id="quemSomos" class="bg-black text-white h-screen overflow-hidden flex items-center justify-start">
     <div id="containerQuemSomos" class="container mx-auto px-1 py-3 flex justify-between items-center">
       <div class="mx-auto max-w-3xl">
@@ -274,7 +276,8 @@
     </div>
   </section>
 
-  <section id="produtos" class="h-[70vh] bg-white flex flex-col justify-start items-center pt-10 space-y-10">
+  <!-- produtos -->
+  <section id="produtos" class="h-[90vh] bg-white flex flex-col justify-start items-center pt-10 space-y-10">
     <div>
       <h1 class="OutfitTitulo text-[#cba34d]">
         Nossos
@@ -313,8 +316,93 @@
         <img src="assets/cameraIntel.webp" alt="">
       </div>
     </div>
+    
+    <div class="flex">
+      <img
+      src="https://images.seeklogo.com/logo-png/17/2/intelbras-logo-png_seeklogo-173651.png"
+      class="w-32 m-4"
+      alt="Avatar" />
+
+      <img
+      src="https://images.seeklogo.com/logo-png/15/2/yamaha-logo-png_seeklogo-154895.png"
+      class="w-32 m-4"
+      alt="Avatar" />
+
+      <img
+      src="https://download.logo.wine/logo/Denon/Denon-Logo.wine.png"
+      class="w-32 m-4"
+      alt="Avatar" />
+
+      <img
+      src="https://files.passeidireto.com/5b1ba336-9ef7-4488-8b78-60c0ad3c5824/5b1ba336-9ef7-4488-8b78-60c0ad3c5824.png"
+      class="w-32 m-4"
+      alt="Avatar" />
+
+      <img
+      src="https://cdn.freebiesupply.com/logos/large/2x/onkyo-logo-png-transparent.png"
+      class="w-32 m-4"
+      alt="Avatar" />
+
+      <img
+      src="https://download.logo.wine/logo/Hikvision/Hikvision-Logo.wine.png"
+      class="w-32 m-4"
+      alt="Avatar" />
+
+      <img
+      src="https://waveoneqatar.com/wp-content/uploads/2023/10/WAVEONE_LOGO-black.png"
+      class="w-32 m-4"
+      alt="Avatar" />
+    </div>
+
+    <div class="overflow-hidden w-full bg-white py-4">
+      <div class="flex w-max animate-slide">
+        <!-- Bloco 1 -->
+        <div class="flex">
+          <img src="https://images.seeklogo.com/logo-png/17/2/intelbras-logo-png_seeklogo-173651.png" class="w-32 m-4" />
+          <img src="https://images.seeklogo.com/logo-png/15/2/yamaha-logo-png_seeklogo-154895.png" class="w-32 m-4" />
+          <img src="https://download.logo.wine/logo/Denon/Denon-Logo.wine.png" class="w-32 m-4" />
+          <img src="https://files.passeidireto.com/5b1ba336-9ef7-4488-8b78-60c0ad3c5824/5b1ba336-9ef7-4488-8b78-60c0ad3c5824.png" class="w-32 m-4" />
+          <img src="https://cdn.freebiesupply.com/logos/large/2x/onkyo-logo-png-transparent.png" class="w-32 m-4" />
+          <img src="https://download.logo.wine/logo/Hikvision/Hikvision-Logo.wine.png" class="w-32 m-4" />
+          <img src="https://waveoneqatar.com/wp-content/uploads/2023/10/WAVEONE_LOGO-black.png" class="w-32 m-4" />
+        </div>
+  
+        <!-- Bloco 2 (idêntico ao bloco 1) -->
+        <div class="flex">
+          <img src="https://images.seeklogo.com/logo-png/17/2/intelbras-logo-png_seeklogo-173651.png" class="w-32 m-4" />
+          <img src="https://images.seeklogo.com/logo-png/15/2/yamaha-logo-png_seeklogo-154895.png" class="w-32 m-4" />
+          <img src="https://download.logo.wine/logo/Denon/Denon-Logo.wine.png" class="w-32 m-4" />
+          <img src="https://files.passeidireto.com/5b1ba336-9ef7-4488-8b78-60c0ad3c5824/5b1ba336-9ef7-4488-8b78-60c0ad3c5824.png" class="w-32 m-4" />
+          <img src="https://cdn.freebiesupply.com/logos/large/2x/onkyo-logo-png-transparent.png" class="w-32 m-4" />
+          <img src="https://download.logo.wine/logo/Hikvision/Hikvision-Logo.wine.png" class="w-32 m-4" />
+          <img src="https://waveoneqatar.com/wp-content/uploads/2023/10/WAVEONE_LOGO-black.png" class="w-32 m-4" />
+        </div>
+
+        <div class="flex">
+          <img src="https://images.seeklogo.com/logo-png/17/2/intelbras-logo-png_seeklogo-173651.png" class="w-32 m-4" />
+          <img src="https://images.seeklogo.com/logo-png/15/2/yamaha-logo-png_seeklogo-154895.png" class="w-32 m-4" />
+          <img src="https://download.logo.wine/logo/Denon/Denon-Logo.wine.png" class="w-32 m-4" />
+          <img src="https://files.passeidireto.com/5b1ba336-9ef7-4488-8b78-60c0ad3c5824/5b1ba336-9ef7-4488-8b78-60c0ad3c5824.png" class="w-32 m-4" />
+          <img src="https://cdn.freebiesupply.com/logos/large/2x/onkyo-logo-png-transparent.png" class="w-32 m-4" />
+          <img src="https://download.logo.wine/logo/Hikvision/Hikvision-Logo.wine.png" class="w-32 m-4" />
+          <img src="https://waveoneqatar.com/wp-content/uploads/2023/10/WAVEONE_LOGO-black.png" class="w-32 m-4" />
+        </div>
+
+        
+        <div class="flex">
+          <img src="https://images.seeklogo.com/logo-png/17/2/intelbras-logo-png_seeklogo-173651.png" class="w-32 m-4" />
+          <img src="https://images.seeklogo.com/logo-png/15/2/yamaha-logo-png_seeklogo-154895.png" class="w-32 m-4" />
+          <img src="https://download.logo.wine/logo/Denon/Denon-Logo.wine.png" class="w-32 m-4" />
+          <img src="https://files.passeidireto.com/5b1ba336-9ef7-4488-8b78-60c0ad3c5824/5b1ba336-9ef7-4488-8b78-60c0ad3c5824.png" class="w-32 m-4" />
+          <img src="https://cdn.freebiesupply.com/logos/large/2x/onkyo-logo-png-transparent.png" class="w-32 m-4" />
+          <img src="https://download.logo.wine/logo/Hikvision/Hikvision-Logo.wine.png" class="w-32 m-4" />
+          <img src="https://waveoneqatar.com/wp-content/uploads/2023/10/WAVEONE_LOGO-black.png" class="w-32 m-4" />
+        </div>
+
+    </div>
   </section>
 
+  <!-- missao -->
   <section id="missao" class="bg-black text-white h-screen overflow-hidden flex justify-start px-3">
     <div id="MissaoDivContainer" class="container w-[80%] mx-auto px-6 py-2 flex justify-between items-center my-5">
       <div class=" max-w-3xl">
@@ -454,6 +542,20 @@
     </div>
   </section>
 
+  <div class="w-full h-[1vh] bg-[#605d59]"></div>
+
+  <!-- estamos crescendo -->
+  <section class="bg-transparent text-white h-screen overflow-hidden flex items-center justify-center px-3">
+    <div class="flex flex-col items-center gap-8">
+      <div class="OutfitTitulo text-center">
+        <h1>Estamos Crescendo</h1>
+        <h2 class="OutfitTextoCinza">Aqui estão os lugares que já transformamos</h3>
+      </div>
+      <div id="map" class="w-[40vw] h-[70vh] shadow-lg rounded-3xl"></div>
+    </div>
+  </section>
+  
+  <!-- contatos -->
   <section id="contatos" class="bg-white text-black h-[70vh] overflow-hidden flex justify-center items-center px-3">
     <div class="OutfitTituloBold text-center flex flex-row items-center gap-4">
       <div class="card2 mr-[3vh]">
@@ -515,7 +617,8 @@
     </div>
   </section>
 
-  <footer class="bg-black text-white px-6 py-4 text-sm">
+  <!-- footer -->
+  <footer class="bg-black text-white px-6 py-4 text-sm mt-4">
     <div class="flex flex-wrap justify-between items-start gap-4 mx-[30vh]">
       
       <!-- Logo -->
@@ -569,7 +672,8 @@
 
   <script src="js/script.js"></script>
   <script src="js/scriptMenu.js"></script>
-
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/mapa.js"></script>
 </body>
 
 </html>
