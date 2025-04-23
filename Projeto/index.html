@@ -112,7 +112,7 @@
           type="button">
 
             <div
-              class="bg-black rounded-full h-12 w-1/4 flex items-center text-white justify-center absolute left-1 top-[4px] bottom-[4px] right-1 group-hover:w-[98%] z-10 duration-500 border border-white">
+              class="bg-black rounded-full h-12 w-1/4 flex items-center text-white justify-center absolute left-1 top-[4px] bottom-[4px] right-1 group-hover:w-[98%] z-10 duration-500">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -277,7 +277,7 @@
   </section>
 
   <!-- produtos -->
-  <section id="produtos" class="h-[120vh] bg-white flex flex-col justify-start items-center pt-10 space-y-10">
+  <section id="produtos" class="h-[80vh] bg-white flex flex-col justify-start items-center pt-10 space-y-10">
     <div>
       <h1 class="OutfitTitulo text-[#cba34d]">
         Nossos
@@ -316,6 +316,36 @@
         <img src="assets/cameraIntel.webp" alt="">
       </div>
     </div>
+
+    
+
+
+
+    <div id="carrosselProdutos" class="mt-[10vh] w-full max-w-2xl relative overflow-hidden rounded-2xl shadow-lg">
+      <!-- Imagens -->
+      <div class="flex transition-transform duration-500 ease-in-out" id="carouselImages">
+        <img src="assets/jbl.png" class="w-[90vh] flex-shrink-0" alt="Nature" />
+        <img src="assets/FRAHM CX 1.png" class="w-[90vh] flex-shrink-0" alt="City" />
+        <img src="assets/FRAHM CX 2.png" class="w-[90vh] flex-shrink-0" alt="Ocean" />
+        <img src="assets/INTERRUPTOR.webp" class="w-[90vh] flex-shrink-0" alt="Ocean" />
+        <img src="assets/fechadura2.webp" class="w-[90vh] flex-shrink-0" alt="Ocean" />
+        <img src="assets/roteador2.jpg" class="w-[90vh] flex-shrink-0" alt="Ocean" />
+        <img src="assets/SUB AVE.webp" class="w-[90vh] flex-shrink-0" alt="Ocean" />
+        <img src="assets/SUB FRAHM.webp" class="w-[90vh] flex-shrink-0" alt="Ocean" />
+        <img src="assets/SUB JBL.webp" class="w-[90vh] flex-shrink-0" alt="Ocean" />
+        <img src="assets/cameraIntel.webp" class="w-[90vh] flex-shrink-0" alt="Ocean" />
+      </div>
+  
+      <!-- Botões -->
+      <button onclick="prevSlide()" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-800 font-bold py-2 px-4 rounded-full shadow">
+        ‹
+      </button>
+      <button onclick="nextSlide()" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-800 font-bold py-2 px-4 rounded-full shadow">
+        ›
+      </button>
+    </div>
+  
+
     
     <div class="flex flex-wrap justify-center">
       <img
@@ -575,7 +605,7 @@
 
   <!-- footer -->
   <footer class="bg-black text-white px-6 py-4 text-sm mt-4">
-    <div class="flex flex-wrap justify-between items-start gap-4 mx-[30vh]">
+    <div id="divFooter" class="flex flex-wrap justify-between items-start gap-4 mx-[30vh]">
       
       <!-- Logo -->
       <div class="flex-shrink-0">
@@ -583,7 +613,7 @@
       </div>
   
       <!-- Endereço -->
-      <div class="max-w-xs leading-snug">
+      <div class="max-w-xs leading-snug ">
         <h3 class="font-semibold mb-1 text-base">Endereço</h3>
         <p>
           Avenida Gameleira, Quadra X11,<br>
@@ -620,7 +650,7 @@
     </div>
   
     <!-- Desenvolvido por -->
-    <div class="mt-4 text-left text-xs text-gray-400">
+    <div class="mt-4 text-left text-xs text-gray-400 ">
       © 2025 Desenvolvido pela <a href="#" class="hover:underline text-white">Bs Marketing</a><br>
       por <a href="#" class="hover:underline text-white">Gabriel Detofol</a>
     </div>
@@ -630,6 +660,29 @@
   <script src="js/scriptMenu.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/mapa.js"></script>
+  <script>
+    const carousel = document.getElementById('carouselImages');
+    const totalSlides = carousel.children.length;
+    let currentIndex = 0;
+
+    function updateSlide() {
+      const offset = -currentIndex * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlide();
+    }
+
+    // Auto-slide (opcional)
+    setInterval(nextSlide, 5000);
+  </script>
 </body>
 
 </html>

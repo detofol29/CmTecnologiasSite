@@ -676,6 +676,10 @@ body {
   animation-delay: -18s;
 }
 
+#carrosselProdutos {
+  display: none;
+}
+
 
 
 
@@ -1050,7 +1054,17 @@ body {
   }
 
   nav img {
-    margin-left: 1px;
+    margin-left: 0px;
+    margin-right: 10px;
+    border: 1px solid red;
+    align-self:flex-start;
+  }
+
+  nav div {
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    padding: 0 0 0 0;
   }
 
   #map{
@@ -1099,61 +1113,32 @@ body {
     height: 140vh;
   }
 
-  .card-3d:hover {
-    animation-play-state: paused !important;
-  }
+ .card-3d{
+  display: none;
+ }
 
-  .card-3d:hover div {
-    animation-play-state: paused !important;
-  }
+ #carrosselProdutos{
+  display: flex;
+ }
 
-  .card-3d div:nth-child(1) {
-    transform: translate(-50%, -50%) rotateY(0deg) translateZ(300px);
-    animation-delay: -0s;
-  }
+ footer p br {
+  display: none;
+ }
 
-  .card-3d div:nth-child(2) {
-    transform: translate(-50%, -50%) rotateY(36deg) translateZ(300px);
-    animation-delay: -2s;
-  }
+ #divFooter {
+  display: block; /* contrário de display: flex */
+  flex-wrap: nowrap; /* se for flex, não quebraria */
+  justify-content: flex-start; /* ou 'center', que é diferente de 'space-between' */
+  align-items: stretch; /* padrão, diferente de 'flex-start' */
+  gap: 0; /* nenhum espaçamento */
+  margin-left: 0;
+  margin-right: 0;
+ }
 
-  .card-3d div:nth-child(3) {
-    transform: translate(-50%, -50%) rotateY(72deg) translateZ(300px);
-    animation-delay: -4s;
-  }
-
-  .card-3d div:nth-child(4) {
-    transform: translate(-50%, -50%) rotateY(108deg) translateZ(300px);
-    animation-delay: -6s;
-  }
-
-  .card-3d div:nth-child(5) {
-    transform: translate(-50%, -50%) rotateY(144deg) translateZ(300px);
-    animation-delay: -8s;
-  }
-
-  .card-3d div:nth-child(6) {
-    transform: translate(-50%, -50%) rotateY(180deg) translateZ(300px);
-    animation-delay: -10s;
-  }
-
-  .card-3d div:nth-child(7) {
-    transform: translate(-50%, -50%) rotateY(216deg) translateZ(300px);
-    animation-delay: -12s;
-  }
-
-  .card-3d div:nth-child(8) {
-    transform: translate(-50%, -50%) rotateY(252deg) translateZ(300px);
-    animation-delay: -14s;
-  }
-
-  .card-3d div:nth-child(9) {
-    transform: translate(-50%, -50%) rotateY(288deg) translateZ(300px);
-    animation-delay: -16s;
-  }
-
-  .card-3d div:nth-child(10) {
-    transform: translate(-50%, -50%) rotateY(324deg) translateZ(300px);
-    animation-delay: -18s;
-  }
+ #divFooter div {
+  margin-bottom: 20px;
+ }
+ footer {
+  padding: 0 0 0 0;
+ }
 }
