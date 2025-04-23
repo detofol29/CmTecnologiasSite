@@ -912,7 +912,7 @@ body {
   }
 }
 
-@media (max-width: 414px){
+@media (max-width: 500px){
   html, body {
     overflow-x: hidden;
   }
@@ -1054,10 +1054,7 @@ body {
   }
 
   nav img {
-    margin-left: 0px;
-    margin-right: 10px;
-    border: 1px solid red;
-    align-self:flex-start;
+    margin: 0 0 0 0;
   }
 
   nav div {
@@ -1065,6 +1062,7 @@ body {
     align-items:flex-start;
     justify-content: space-between;
     padding: 0 0 0 0;
+
   }
 
   #map{
@@ -1141,4 +1139,11 @@ body {
  footer {
   padding: 0 0 0 0;
  }
+}
+
+@media (max-width: 378px){
+  .card {
+    width: 15vh;              /* Aproximadamente 300px */
+    height: 12vh;            /* Aproximadamente 200px */
+  }
 }
