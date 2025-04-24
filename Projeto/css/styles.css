@@ -1,45 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: black;
+  font-family: Arial, sans-serif;
+  background-color: black;
 }
 
-/* Seção com fundo preto */
 .dodeca-section {
-    position: fixed;
-    top: 7vh;           /* Em vez de 10px */
-    left: 30vw;         /* Em vez de 50px ou valor sem unidade */
-    right: auto;
-    bottom: auto;
-    height: 100vh;       /* Já estava ótimo */
-    width: 100vw;        /* Também ótimo */
-    overflow: hidden;
-    pointer-events: none;
-    z-index: -1;
+  position: fixed;
+  top: 7vh;
+  left: 30vw;
+  right: auto;
+  bottom: auto;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .dodeca-section canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .OutfitTitulo {
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 7vh;
-    line-height: 8vh;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 7vh;
+  line-height: 8vh;
 }
 
 .OutfitTituloBold {
@@ -52,22 +56,22 @@ body {
 }
 
 .OutfitTituloFino {
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 7vh;
-    line-height: 8vh;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 7vh;
+  line-height: 8vh;
 }
 
 .OutfitTextoCinza {
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 3vh;
-    line-height: 4vh;
-    color: #605d59;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 3vh;
+  line-height: 4vh;
+  color: #605d59;
 }
 
 .OutfitTextoBranco {
@@ -84,56 +88,54 @@ body {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
-  font-style:italic;
+  font-style: italic;
   font-size: 3vh;
   line-height: 4vh;
   color: #cba34d;
 }
 
 .second-canvas {
-    position: fixed;
-    top: -10vh;
-    left: 5vh;
-    /* Fixa a seção no topo da página */
-    right: 0;
-    bottom: 150vh;
-    /* Preenche toda a tela */
-    height: 50vh; /* relativo à altura da tela */
-    width: 50vw;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: -1;
+  position: fixed;
+  top: -10vh;
+  left: 5vh;
+  right: 0;
+  bottom: 150vh;
+  height: 50vh;
+  width: 50vw;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .second-canvas canvas {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-/* ----CARDS---- */ 
+/* ----CARDS---- */
 
 .card {
   position: relative;
-  width: 40vh;              /* Aproximadamente 300px */
-  height: 30vh;            /* Aproximadamente 200px */
+  width: 40vh;
+  height: 30vh;
   background: #cba34d;
-  border-radius: 1.5vh;    /* Aproximadamente 10px */
+  border-radius: 1.5vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
-  
+
 .card svg {
-  width: 6vh; /* Aproximadamente 48px */
+  width: 6vh;
   fill: #333;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
 .card:hover {
   transform: rotate(-5deg) scale(1.1);
-  box-shadow: 0 1.5vh 3vh rgba(0, 0, 0, 0.2); /* Aproximadamente 10px 20px */
+  box-shadow: 0 1.5vh 3vh rgba(0, 0, 0, 0.2);
 }
 
 .card__content {
@@ -143,7 +145,7 @@ body {
   transform: translate(-50%, -50%) rotate(-45deg);
   width: 100%;
   height: 100%;
-  padding: 3vh; /* Aproximadamente 20px */
+  padding: 3vh;
   box-sizing: border-box;
   background-color: #fff;
   opacity: 0;
@@ -157,14 +159,14 @@ body {
 
 .card__title {
   margin: 0;
-  font-size: 3vh; /* Aproximadamente 24px */
+  font-size: 3vh;
   color: #333;
   font-weight: 700;
 }
 
 .card__description {
-  margin: 1.5vh 0 0; /* Aproximadamente 10px */
-  font-size: 1.8vh;  /* Aproximadamente 14px */
+  margin: 1.5vh 0 0;
+  font-size: 1.8vh;
   color: #777;
   line-height: 1.4;
 }
@@ -179,6 +181,7 @@ body {
     0% {
       transform: translateX(0%);
     }
+
     100% {
       transform: translateX(-50%);
     }
@@ -215,7 +218,7 @@ body {
   inset: 0;
   animation: text-rotation 8s linear infinite;
 
-  > span {
+  >span {
     position: absolute;
     transform: rotate(calc(19deg * var(--index)));
     inset: 7px;
@@ -279,14 +282,12 @@ body {
 }
 
 .card-int {
-  background-image: linear-gradient(
-    to right bottom,
-    #191919,
-    #605d59,
-    #d1d3d2,
-    #cba34d,
-    #f8eb94
-  );
+  background-image: linear-gradient(to right bottom,
+      #191919,
+      #605d59,
+      #d1d3d2,
+      #cba34d,
+      #f8eb94);
   background-size: 200% 200%;
   background-position: 0% 0%;
   height: 100%;
@@ -341,27 +342,35 @@ body {
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
-  background-color: rgba(203, 163, 77, 0.4); /* dourado transparente */
+  background-color: rgba(203, 163, 77, 0.4);
+  /* dourado transparente */
 }
 
-.btn1, .btn2, .btn3, .btn4 {
+.btn1,
+.btn2,
+.btn3,
+.btn4 {
   position: absolute;
   width: 2px;
 }
 
-.btn1, .btn2, .btn3 {
+.btn1,
+.btn2,
+.btn3 {
   height: 45px;
   top: 30%;
   right: -4px;
   background-image: linear-gradient(to right, #605d59, #cba34d);
 }
 
-.btn2, .btn3 {
+.btn2,
+.btn3 {
   transform: scale(-1);
   left: -4px;
 }
 
-.btn2, .btn3 {
+.btn2,
+.btn3 {
   transform: scale(-1);
   height: 30px;
 }
@@ -404,7 +413,6 @@ body {
 
 /* redes sociais */
 
-/* From Uiverse.io by ubaidi10 */ 
 .card3 {
   width: fit-content;
   height: fit-content;
@@ -418,7 +426,6 @@ body {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
 }
 
-/* for all social containers*/
 .socialContainer {
   width: 52px;
   height: 52px;
@@ -429,6 +436,7 @@ body {
   overflow: hidden;
   transition-duration: 0.3s;
 }
+
 /* instagram*/
 .containerOne:hover {
   background-color: #d62976;
@@ -436,20 +444,23 @@ body {
   transform: scale(1.5);
   border-radius: 15px;
 }
-/* twitter*/
+
+/* email*/
 .containerTwo:hover {
   background-color: red;
   transition-duration: 0.3s;
   transform: scale(1.5);
   border-radius: 15px;
 }
-/* linkdin*/
+
+/*telefone*/
 .containerThree:hover {
   background-color: purple;
   transition-duration: 0.3s;
   transform: scale(1.5);
   border-radius: 15px;
 }
+
 /* Whatsapp*/
 .containerFour:hover {
   background-color: #25d366;
@@ -486,12 +497,12 @@ body {
     opacity: 1;
   }
 }
+
 .card:has(.socialContainer:hover) .socialContainer:not(:hover) {
   opacity: 0.1;
 }
 
 
-/* From Uiverse.io by Gaurang7717 */ 
 .Btn2 {
   display: flex;
   align-items: center;
@@ -523,6 +534,7 @@ body {
 .sign svg path {
   fill: white;
 }
+
 .textW {
   position: absolute;
   right: 0%;
@@ -552,11 +564,12 @@ body {
   transition-duration: 0.3s;
   padding-right: 10px;
 }
+
 .Btn2:active {
   transform: translate(2px, 2px);
 }
 
-.textoQuemSomos{
+.textoQuemSomos {
   width: auto;
 }
 
@@ -566,6 +579,7 @@ body {
   from {
     transform: perspective(800px) rotateY(-360deg);
   }
+
   to {
     transform: perspective(800px) rotateY(0deg);
   }
@@ -575,9 +589,11 @@ body {
   10% {
     filter: brightness(1);
   }
+
   50% {
     filter: brightness(0.1);
   }
+
   90% {
     filter: brightness(1);
   }
@@ -681,25 +697,18 @@ body {
 }
 
 
+/* RESPONSIVIDADE */
 
-
-/* Celulares pequenos (até 480px)
-@media (max-width: 480px) { ... }
-
-/* Celulares médios e grandes */
-/* @media (max-width: 768px) { ... } */
-
-/* Tablets e telas menores */
-/* @media (max-width: 992px) { ... }  */
-
-/* Laptops e desktops */
 @media (max-width: 1409px) {
   .card {
     position: relative;
-    width: 35vh;              /* Aproximadamente 300px */
-    height: 25vh;            /* Aproximadamente 200px */
+    width: 35vh;
+    /* Aproximadamente 300px */
+    height: 25vh;
+    /* Aproximadamente 200px */
     background: #cba34d;
-    border-radius: 1.5vh;    /* Aproximadamente 10px */
+    border-radius: 1.5vh;
+    /* Aproximadamente 10px */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -709,11 +718,11 @@ body {
 }
 
 @media (max-width: 1280px) {
-  .second-canvas{
+  .second-canvas {
     display: none;
   }
 
-  #quemSomos .OutfitTextoBranco{
+  #quemSomos .OutfitTextoBranco {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -737,13 +746,13 @@ body {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
-    font-style:italic;
+    font-style: italic;
     font-size: 2vh;
     line-height: 3vh;
     color: #cba34d;
   }
 
-  #quemSomos .OutfitTituloBold{
+  #quemSomos .OutfitTituloBold {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -752,7 +761,7 @@ body {
     line-height: 8vh;
   }
 
-  #missao .OutfitTituloBold{
+  #missao .OutfitTituloBold {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -761,7 +770,7 @@ body {
     line-height: 7vh;
   }
 
-  #missao .OutfitTextoBranco{
+  #missao .OutfitTextoBranco {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -771,20 +780,19 @@ body {
     color: white;
   }
 
-  .textoQuemSomos 
-  {
+  .textoQuemSomos {
     max-width: 80vh;
   }
 }
 
-@media (max-width: 1025px){
-  .imagemMapa{
+@media (max-width: 1025px) {
+  .imagemMapa {
     width: 100vh;
     margin-top: 90px;
     margin-left: 50px;
   }
 
-  #missao .OutfitTextoBranco{
+  #missao .OutfitTextoBranco {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -795,13 +803,13 @@ body {
   }
 }
 
-@media (max-width: 920px){
+@media (max-width: 920px) {
   .card {
     position: relative;
-    width: 28.8vh;              /* Aproximadamente 300px */
-    height: 20vh;            /* Aproximadamente 200px */
+    width: 28.8vh;
+    height: 20vh;
     background: #cba34d;
-    border-radius: 1.5vh;    /* Aproximadamente 10px */
+    border-radius: 1.5vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -810,12 +818,12 @@ body {
   }
 }
 
-@media (max-width: 768px){
-  .dodeca-section{
+@media (max-width: 768px) {
+  .dodeca-section {
     display: none;
   }
 
-  .card{
+  .card {
     width: 26vh;
     height: 18vh;
   }
@@ -824,7 +832,7 @@ body {
     flex-direction: column;
   }
 
-  #MissaoDivContainer .OutfitTituloBold{
+  #MissaoDivContainer .OutfitTituloBold {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -834,11 +842,13 @@ body {
     padding: 0 0 0 0;
   }
 
-  .svgLampada{
+  .svgLampada {
     display: none;
   }
 
-  #missaoDiv, #visaoDiv, #valoresDiv{
+  #missaoDiv,
+  #visaoDiv,
+  #valoresDiv {
     width: 95%;
     margin: 0;
     text-align: center;
@@ -850,14 +860,14 @@ body {
     margin-left: 0;
   }
 
-  .imagemMapa{
+  .imagemMapa {
     width: 50%;
     margin-top: 20px;
     align-self: center;
     margin: auto;
   }
 
-  #quemSomos .OutfitTextoBranco{
+  #quemSomos .OutfitTextoBranco {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -881,13 +891,13 @@ body {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
-    font-style:italic;
+    font-style: italic;
     font-size: 2vh;
     line-height: 3vh;
     color: #cba34d;
   }
 
-  #quemSomos .OutfitTituloBold{
+  #quemSomos .OutfitTituloBold {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -904,7 +914,7 @@ body {
     margin: auto;
   }
 
-  .imagemDiv{
+  .imagemDiv {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -912,8 +922,10 @@ body {
   }
 }
 
-@media (max-width: 500px){
-  html, body {
+@media (max-width: 500px) {
+
+  html,
+  body {
     overflow-x: hidden;
   }
 
@@ -936,22 +948,22 @@ body {
   }
 
   .OutfitTituloFino {
-      font-family: "Outfit", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 100;
-      font-style: normal;
-      font-size: 5vh;
-      line-height: 5vh;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 5vh;
+    line-height: 5vh;
   }
 
   .OutfitTextoCinza {
-      font-family: "Outfit", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 2.7vh;
-      line-height: 2.5vh;
-      color: #605d59;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.7vh;
+    line-height: 2.5vh;
+    color: #605d59;
   }
 
   .OutfitTextoBranco {
@@ -968,7 +980,7 @@ body {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
-    font-style:italic;
+    font-style: italic;
     font-size: 3vh;
     line-height: 4vh;
     color: #cba34d;
@@ -987,16 +999,16 @@ body {
     margin-top: 2vh;
   }
 
-  #menu-button{
+  #menu-button {
     margin-right: 1.5vh;
   }
 
   .card {
     position: relative;
-    width: 20vh;              /* Aproximadamente 300px */
-    height: 15vh;            /* Aproximadamente 200px */
+    width: 20vh;
+    height: 15vh;
     background: #cba34d;
-    border-radius: 1.5vh;    /* Aproximadamente 10px */
+    border-radius: 1.5vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1006,21 +1018,21 @@ body {
 
   .card__title {
     margin: 0;
-    font-size: 2vh; /* Aproximadamente 24px */
+    font-size: 2vh;
     color: #333;
     font-weight: 700;
   }
-  
+
   .card__description {
     display: none;
   }
 
-  #MissaoDivContainer{
+  #MissaoDivContainer {
     width: 95%;
     padding: 0 0 0 0;
   }
 
-  #MissaoDivContainer .OutfitTextoBranco{
+  #MissaoDivContainer .OutfitTextoBranco {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -1059,34 +1071,33 @@ body {
 
   nav div {
     display: flex;
-    align-items:flex-start;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 0 0 0 0;
 
   }
 
-  #map{
+  #map {
     width: 100%;
     margin: auto;
   }
 
   .card-3d {
-  position: relative;
-  width: 450px;
-  height: 200px;
-  transform-style: preserve-3d;
-  transform: perspective(800vh);
-  animation: autoRun3d 20s linear infinite;
-  will-change: transform;
-  border: 2px solid red;
-  height: 50vh;
+    position: relative;
+    width: 450px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: perspective(800vh);
+    animation: autoRun3d 20s linear infinite;
+    will-change: transform;
+    border: 2px solid red;
+    height: 50vh;
   }
 
   .card-3d div {
     position: absolute;
     width: 130px;
     height: 150px;
-    /* background-color: rgb(199, 199, 199); */
     background-color: white;
     border: solid 2px lightgray;
     border-radius: 0.5rem;
@@ -1107,43 +1118,44 @@ body {
     background-color: white;
   }
 
-  #produtos{
+  #produtos {
     height: 140vh;
   }
 
- .card-3d{
-  display: none;
- }
+  .card-3d {
+    display: none;
+  }
 
- #carrosselProdutos{
-  display: flex;
- }
+  #carrosselProdutos {
+    display: flex;
+  }
 
- footer p br {
-  display: none;
- }
+  footer p br {
+    display: none;
+  }
 
- #divFooter {
-  display: block; /* contrário de display: flex */
-  flex-wrap: nowrap; /* se for flex, não quebraria */
-  justify-content: flex-start; /* ou 'center', que é diferente de 'space-between' */
-  align-items: stretch; /* padrão, diferente de 'flex-start' */
-  gap: 0; /* nenhum espaçamento */
-  margin-left: 0;
-  margin-right: 0;
- }
+  #divFooter {
+    display: block;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
 
- #divFooter div {
-  margin-bottom: 20px;
- }
- footer {
-  padding: 0 0 0 0;
- }
+  #divFooter div {
+    margin-bottom: 20px;
+  }
+
+  footer {
+    padding: 0 0 0 0;
+  }
 }
 
-@media (max-width: 378px){
+@media (max-width: 378px) {
   .card {
-    width: 15vh;              /* Aproximadamente 300px */
-    height: 12vh;            /* Aproximadamente 200px */
+    width: 15vh;
+    height: 12vh;
   }
 }

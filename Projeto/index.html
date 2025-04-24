@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="icon" href="assets/cmLogo-removebg-preview.png">
 </head>
 
 <body class="bg-black text-gray-900">
@@ -40,7 +41,7 @@
   <!-- Navbar -->
   <nav class="w-full bg-transparent shadow-md">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <img src="assets/cmLogo.jpg" alt="" class="w-40 h-auto logo">
+      <img src="assets/cmLogo-removebg-preview.png" alt="" class="w-40 h-auto logo">
       <button id="menu-button" class="text-gray-500">
         <i class="fas fa-bars text-4xl"></i>
       </button>
@@ -112,7 +113,7 @@
           type="button">
 
             <div
-              class="bg-black rounded-full h-12 w-1/4 flex items-center text-white justify-center absolute left-1 top-[4px] bottom-[4px] right-1 group-hover:w-[98%] z-10 duration-500">
+              class="bg-black rounded-full h-12 w-1/4 flex items-center text-white justify-center absolute left-1 top-[4px] bottom-[4px] right-1 group-hover:w-[98%] z-10 duration-500 border border-[#fffff]">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -660,29 +661,7 @@
   <script src="js/scriptMenu.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/mapa.js"></script>
-  <script>
-    const carousel = document.getElementById('carouselImages');
-    const totalSlides = carousel.children.length;
-    let currentIndex = 0;
-
-    function updateSlide() {
-      const offset = -currentIndex * 100;
-      carousel.style.transform = `translateX(${offset}%)`;
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      updateSlide();
-    }
-
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      updateSlide();
-    }
-
-    // Auto-slide (opcional)
-    setInterval(nextSlide, 5000);
-  </script>
+  <script src="js/carrossel.js"></script>
 </body>
 
 </html>
