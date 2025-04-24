@@ -25,8 +25,14 @@ const cidades = [
 ];
 
 // Adiciona os marcadores no mapa
+const iconePersonalizado = L.icon({
+  iconUrl: 'https://cdn-icons-png.flaticon.com/512/1762/1762168.png', // pode ser SVG, PNG, etc.
+  iconSize: [32, 32], // tamanho do ícone [largura, altura]
+  iconAnchor: [16, 32], // ponto do ícone que fica ancorado no mapa
+  popupAnchor: [0, -32] // onde aparece o popup relativo ao ícone
+});
 cidades.forEach((cidade) => {
-  L.marker(cidade.coords)
+  L.marker(cidade.coords, {icon: iconePersonalizado})
     .addTo(map)
     .bindPopup(`<strong>${cidade.nome}</strong>`);
 });
@@ -40,15 +46,9 @@ cidades.forEach((cidade) => {
 
 // Adicionar marcadores personalizados
 
-// const iconePersonalizado = L.icon({
-//   iconUrl: 'caminho/para/seu-icone.png', // pode ser SVG, PNG, etc.
-//   iconSize: [32, 32], // tamanho do ícone [largura, altura]
-//   iconAnchor: [16, 32], // ponto do ícone que fica ancorado no mapa
-//   popupAnchor: [0, -32] // onde aparece o popup relativo ao ícone
-// });
 
 // L.marker([-15.7797, -47.9297], { icon: iconePersonalizado }).addTo(map)
 //   .bindPopup("Brasília");
 
-grupoDeMarcadores.addTo(map);
+//grupoDeMarcadores.addTo(map);
 map.fitBounds(grupoDeMarcadores.getBounds());

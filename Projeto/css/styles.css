@@ -424,6 +424,7 @@ body {
   padding: 25px 25px;
   gap: 20px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  border-radius: 10px;
 }
 
 .socialContainer {
@@ -435,6 +436,7 @@ body {
   justify-content: center;
   overflow: hidden;
   transition-duration: 0.3s;
+  border-radius: 10px;
 }
 
 /* instagram*/
@@ -1078,7 +1080,7 @@ body {
   }
 
   #map {
-    width: 100%;
+    width: 95%;
     margin: auto;
   }
 
@@ -1119,8 +1121,29 @@ body {
   }
 
   #produtos {
-    height: 140vh;
+    height: 150vh;
+    padding: 7vh 0;
   }
+
+  #missao {
+    height: 120vh;
+    padding: 5vh 0;
+  }
+
+  #quemSomos {
+    height: 125vh;
+    padding: 2vh 2vh;
+  }
+
+  #home{
+    height: 90vh
+  }
+
+  #estamosCrescendo{
+    height: 110vh;
+    padding: 2vh 2vh;
+  }
+  
 
   .card-3d {
     display: none;
@@ -1150,7 +1173,19 @@ body {
 
   footer {
     padding: 0 0 0 0;
+    height: 40vh;
   }
+
+  .imagemDiv {
+    height: 30vh;
+    margin-top: 6vh;
+  }
+
+  .imagemMapa{
+    width: 100%;
+  }
+
+
 }
 
 @media (max-width: 378px) {
@@ -1158,4 +1193,5 @@ body {
     width: 15vh;
     height: 12vh;
   }
+
 }
