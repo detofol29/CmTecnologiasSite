@@ -1,7 +1,6 @@
 // Inicializa o mapa centralizado no Brasil
 const map = L.map('map').setView([-14.2350, -51.9253], 4); // Coordenadas centrais do Brasil
 
-// Adiciona o tile layer (mapa base)
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; OpenStreetMap contributors & Carto',
   subdomains: 'abcd',
@@ -26,7 +25,7 @@ const cidades = [
 
 // Adiciona os marcadores no mapa
 const iconePersonalizado = L.icon({
-  iconUrl: 'https://cdn-icons-png.flaticon.com/512/1762/1762168.png', // pode ser SVG, PNG, etc.
+  iconUrl: 'https://cdn-icons-png.flaticon.com/512/1762/1762168.png', 
   iconSize: [32, 32], // tamanho do ícone [largura, altura]
   iconAnchor: [16, 32], // ponto do ícone que fica ancorado no mapa
   popupAnchor: [0, -32] // onde aparece o popup relativo ao ícone
@@ -44,11 +43,4 @@ cidades.forEach((cidade) => {
   grupoDeMarcadores.addLayer(marker);
 });
 
-// Adicionar marcadores personalizados
-
-
-// L.marker([-15.7797, -47.9297], { icon: iconePersonalizado }).addTo(map)
-//   .bindPopup("Brasília");
-
-//grupoDeMarcadores.addTo(map);
 map.fitBounds(grupoDeMarcadores.getBounds());
